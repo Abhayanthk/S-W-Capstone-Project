@@ -2,23 +2,24 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: black;
 }
 .main {
+    margin: 0 auto;
     background-color: #FEFCFB;
+    width: 1440px;
+    /* min-height: 900px; */
     /* width: 100vw; */
     /* display: flex;
     flex-direction: column;
     align-content: center; */
-    padding: 0 60px;
-    margin-bottom: 100px;
+    padding: 0 48px;
 }
 
 nav {
-    /* width: 100%; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin: 0 auto; */
     padding: 20px 0;
     background-color: #FEFCFB;
 }
@@ -37,11 +38,11 @@ nav {
 
 .othernav {
     display: flex;
-    gap: 50px;
+    gap: 40px;
     font-family: 'Roboto Serif', serif;
     font-size: 28px;
     font-weight: 400;
-    line-height: 38px;
+    line-height: 32px;
     letter-spacing: -0.02em;
     text-align: left;
     text-underline-position: from-font;
@@ -74,24 +75,42 @@ header {
     height: auto;
 }
 
- .portfolio-grid {
+ /* .portfolio-grid {
     display: grid;
     grid-template-columns:  repeat(3,1fr);
+    grid-template-rows:  repeat(3,1fr);
+    grid-auto-rows: 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 52px;
+    width: 100%;
+    max-height: 1349px;
+    overflow: hidden;
+}  */
+.parent-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
-} 
+    /* max-width: 1200px; */
+  }
+
+  .child-grid {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+  }
 
 
 .card img {
-    width: 80%;
+    width: 100%;
     height: auto;
     border-radius: 22px;
 }
 .portfolio-grid h3{
     font-family: 'Public Sans', sans-serif;
-      font-size: 17px;
+      font-size: 20px;
       font-weight: 400;
-      line-height: 24px;
+      /* line-height: 24px; */
       letter-spacing: -0.005em;
       text-align: left;
       text-underline-position: from-font;
@@ -101,33 +120,43 @@ header {
     font-family: 'Public Sans', sans-serif;
   font-size: 17px;
   font-weight: 400;
-  line-height: 24px;
+  /* line-height: 24px; */
   letter-spacing: -0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #2E21149E;
+  justify-content: space-around;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 96px 0;
 }
 .about p{
     font-family: 'Roboto Serif', serif;
     font-size: 48px;
+    max-width: 900px;
     font-weight: 400;
     line-height: 52px;
+    height: 260px;
     letter-spacing: -0.02em;
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    padding: 0 27%;
 }
 section{
     display: flex;
     gap: 52px;
     justify-content: space-between;
-    margin: 160px 0;
+    /* margin: 160px 0; */
+    padding: 52px 0;
 }
 .contact{
     font-family: 'Roboto Serif', serif;
-    font-size: 40px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 32px;
     letter-spacing: -0.02em;
@@ -137,28 +166,32 @@ section{
 }
 .para{
     font-family: 'Public Sans', sans-serif;
-  font-size: 25px;
+  font-size: 17px;
+
   font-weight: 400;
-  line-height: 50px;
+  line-height: 28px;
   letter-spacing: -0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color:#28211B;
-  max-width: 900px;
+  max-width: 640px;
 
 }
 
 .form-container {
     text-align: center;
-    width: 40%;
+    max-width: 700px;
+    height: 320px;
     margin: 0 auto;
     margin-bottom: 300px;
+    padding: 48px 0;
+    gap: 48px;
   }
 
   .form-heading {
     font-family: 'Domine', serif;
-    font-size: 45px;
+    font-size: 34px;
     font-weight: 700;
     margin-bottom: 50px;
     /* line-height: 100px; */
@@ -171,13 +204,13 @@ section{
 .form{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 16px;
 }
 input[type="text"],
 input[type="email"],
 textarea {
   background: #F3EEEB;
-  border: none;
+  border: var(--strokeWidth);
   border-radius: 8px;
   padding: 14px;
   font-size: 16px;
@@ -202,19 +235,22 @@ input[type="email"] {
     grid-column: span 2;
     min-height: 124px;
     resize: none;
+    width: 700px;
+    height: auto;
+    min-height: 124px; 
   }
   button {
     background: rgba(40, 33, 27, 1);
     color: #FFFFFF;
     border: none;
     border-radius: 8px;
-    padding: 12px 20px;
+    padding: 8px 16px;
     cursor: pointer;
     grid-column: 1;
     width: fit-content;
     font-family: 'Public Sans', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 500;
     line-height: 20px;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -223,10 +259,11 @@ footer{
     display: flex;
     justify-content: space-between;
     padding: 96px 0 32px 0;
+    gap: 32px;
 }
 .footer{
     font-family: 'Roboto Serif', serif;
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 400;
     line-height: 32px;
     letter-spacing: -0.02em;

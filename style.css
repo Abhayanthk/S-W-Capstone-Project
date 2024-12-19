@@ -54,13 +54,14 @@ nav {
     background-color: #FEFCFB;
     padding:96px 0;
     gap: 52px;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 header {
     font-family: 'Roboto Serif', serif;
       font-size: 120px;
       font-weight: 700;
       line-height: 120px;
+      margin: 52px 0;
       letter-spacing: -0.02em;
       text-align: center;
       text-underline-position: from-font;
@@ -91,6 +92,7 @@ header {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
+    gap: 52px
     /* max-width: 1200px; */
   }
 

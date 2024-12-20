@@ -165,7 +165,7 @@ section{
     text-align: center;
     height: auto;
     margin: 0 auto;
-    margin-bottom: 96px;
+    margin-bottom: 300px;
     /* padding: 48px 0; */
     gap: 48px;
 }
@@ -237,7 +237,7 @@ input[type="email"] {
 footer{
     display: flex;
     justify-content: space-between;
-    padding: 96px 0 32px 0;
+    padding: 64px 0 32px 0;
     gap: 32px;
 }
 .footer{

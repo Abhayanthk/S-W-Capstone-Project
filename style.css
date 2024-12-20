@@ -2,17 +2,10 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: black;
 }
 .main {
     margin: 0 auto;
     background-color: #FEFCFB;
-    width: 1440px;
-    /* min-height: 900px; */
-    /* width: 100vw; */
-    /* display: flex;
-    flex-direction: column;
-    align-content: center; */
     padding: 0 48px;
 }
 
@@ -32,8 +25,6 @@ nav {
     line-height: 42px;
     letter-spacing: -0.04em;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
 }
 
 .othernav {
@@ -45,8 +36,6 @@ nav {
     line-height: 32px;
     letter-spacing: -0.02em;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
   
 }
 
@@ -64,8 +53,6 @@ header {
       margin: 52px 0;
       letter-spacing: -0.02em;
       text-align: center;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
 }
 
 .img1 img {
@@ -115,8 +102,6 @@ header {
       /* line-height: 24px; */
       letter-spacing: -0.005em;
       text-align: left;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
 }
 .portfolio-grid p{
     font-family: 'Public Sans', sans-serif;
@@ -125,8 +110,7 @@ header {
   /* line-height: 24px; */
   letter-spacing: -0.005em;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+
   color: #2E21149E;
   justify-content: space-around;
 }
@@ -143,11 +127,10 @@ header {
     max-width: 900px;
     font-weight: 400;
     line-height: 52px;
-    height: 260px;
+    height: auto;
     letter-spacing: -0.02em;
     text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+
 }
 section{
     display: flex;
@@ -163,8 +146,6 @@ section{
     line-height: 32px;
     letter-spacing: -0.02em;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
 }
 .para{
     font-family: 'Public Sans', sans-serif;
@@ -174,8 +155,7 @@ section{
   line-height: 28px;
   letter-spacing: -0.005em;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+
   color:#28211B;
   max-width: 640px;
 
@@ -183,15 +163,14 @@ section{
 
 .form-container {
     text-align: center;
-    max-width: 700px;
-    height: 320px;
+    height: auto;
     margin: 0 auto;
     margin-bottom: 300px;
-    padding: 48px 0;
+    /* padding: 48px 0; */
     gap: 48px;
-  }
+}
 
-  .form-heading {
+.form-heading {
     font-family: 'Domine', serif;
     font-size: 34px;
     font-weight: 700;
@@ -199,14 +178,15 @@ section{
     /* line-height: 100px; */
     letter-spacing: -0.01em;
     text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-  }
+}
 
 .form{
+    width: 50%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 16px;
+    /* overflow: auto; */
 }
 input[type="text"],
 input[type="email"],
@@ -217,7 +197,7 @@ textarea {
   padding: 14px;
   font-size: 16px;
   color: #000000;
-  min-height: 44px;
+  height: 44px;
 }
 input::placeholder,
 textarea::placeholder {
@@ -236,10 +216,8 @@ input[type="email"] {
   textarea {
     grid-column: span 2;
     min-height: 124px;
-    resize: none;
-    width: 700px;
-    height: auto;
-    min-height: 124px; 
+    width: auto;
+    height: auto; 
   }
   button {
     background: rgba(40, 33, 27, 1);
@@ -254,8 +232,7 @@ input[type="email"] {
     font-size: 15px;
     font-weight: 500;
     line-height: 20px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+
 }
 footer{
     display: flex;
@@ -270,8 +247,7 @@ footer{
     line-height: 32px;
     letter-spacing: -0.02em;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+
     color: rgba(46, 33, 20, 0.62);
 }
 .floating-contact{
@@ -280,9 +256,121 @@ footer{
     font-weight: 500;
     line-height: 24px;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     border: 1.5px solid rgba(110, 91, 73, 0.2);
     padding: 14px 32px;
     border-radius: 22px;
+}
+@media (max-width: 1024px) {
+    .parent-grid {
+        /* grid-template-columns: repeat(2, 1fr);
+        gap: 20px; */
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        font-size: 90px;
+    }
+    .child-grid {
+        /* grid-template-rows: auto; */
+        /* gap: 15px; */
+    }
+
+    nav {
+        padding: 10px 20px;
+    }
+
+    .nature {
+        /* font-size: 32px; */
+    }
+    .form{
+        /* width: 100vw; */
+        gap: 10px;
+    }
+    input{
+        height: 20px !important;
+    }
+    .othernav {
+        gap: 20px;
+        /* font-size: 20px; */
+    }
+    .about{
+        padding: 50px 0;
+        /* padding-bottom: 0; */
+        /* margin-bottom: 0; */
+        height: auto;
+    }
+    .about p {
+        font-size: 28px;
+        line-height: 40px;
+
+    }
+    .form{
+        width: 70%;
+    }
+    .contact{
+        font-size: 21px;
+    }
+    .para{
+        max-width: 500px;
+        font-size: 14px;
+    }
+    .footer{
+        font-size: 22px;
+    }
+    .floating-contact{
+        font-size: 14px;
+        padding: 10px 28px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .nature{
+        font-size: 38px;
+    }
+    .othernav {
+        font-size: 24px;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 12px;
+        gap: 4px;
+        /* font-size: 20px; */
+    }
+    .heading{
+        padding: 30px 0;
+        padding-top: 0;
+    }
+
+    .parent-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .child-grid {
+        grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    header {
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    .about p {
+        font-size: 20px;
+    }
+    .form{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    input, textarea{
+        width: 100%;
+    }
 }
